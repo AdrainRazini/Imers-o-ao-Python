@@ -35,11 +35,22 @@ if jogador == 2:
 if jogador == 3:
  jogador = "Tesoura"
   
+bot_nome = resultado["Nome"]
 
 def bot(valor):
 
  print(f' Bot: {resultado["Nome"]}')
  print(f'Jogo: {valor} x {resultado["Nome"]}')
- return 
+
 
 bot(jogador)
+
+# Regras do jogo
+if jogador == bot_nome:
+    print("Empate!")
+elif (jogador == "Pedra" and bot_nome == "Tesoura") or \
+     (jogador == "Papel" and bot_nome == "Pedra") or \
+     (jogador == "Tesoura" and bot_nome == "Papel"):
+    print("Você ganhou! 🎉")
+else:
+    print("Bot ganhou! 🤖")
