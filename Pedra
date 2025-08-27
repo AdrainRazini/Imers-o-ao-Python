@@ -1,0 +1,45 @@
+from random import choice
+from tabulate import tabulate
+import random
+
+print('Vamos Joga Um Jogo')
+print('-_-' * 15)
+
+dados = [
+    ["Pedra", 1],
+    ["Papel", 2],
+    ["Tesoura", 3]
+]
+
+cabeçalhos = ["Nome", "Valor"]
+# sorteia uma linha da tabela
+calculo = random.choice(dados)
+
+# transforma em dicionário com base nos cabeçalhos
+resultado = dict(zip(cabeçalhos, calculo))
+
+
+
+tabela_formatada = tabulate(dados, headers=cabeçalhos, tablefmt="grid")
+print(tabela_formatada)
+print('-_-' * 15)
+
+
+
+jogador = int(input('Digite Seu Numero: '))
+
+if jogador == 1:
+ jogador = "Pedra"
+if jogador == 2:
+ jogador = "Papel"
+if jogador == 3:
+ jogador = "Tesoura"
+  
+
+def bot(valor):
+
+ print(f' Bot: {resultado["Nome"]}')
+ print(f'Jogo: {valor} x {resultado["Nome"]}')
+ return 
+
+bot(jogador)
