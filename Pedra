@@ -38,19 +38,23 @@ if jogador == 3:
 bot_nome = resultado["Nome"]
 
 def bot(valor):
-
+ print('-_-' * 15)
  print(f' Bot: {resultado["Nome"]}')
+ print('-_-' * 15)
  print(f'Jogo: {valor} x {resultado["Nome"]}')
-
+ print('-_-' * 15)
 
 bot(jogador)
 
 # Regras do jogo
 if jogador == bot_nome:
+    print('-_-' * 15)
     print("Empate!")
 elif (jogador == "Pedra" and bot_nome == "Tesoura") or \
      (jogador == "Papel" and bot_nome == "Pedra") or \
      (jogador == "Tesoura" and bot_nome == "Papel"):
-    print("Você ganhou! 🎉")
+    print('-_-' * 15)
+    print("Você ganhou!")
 else:
-    print("Bot ganhou! 🤖")
+    print('-_-' * 15)
+    print("Bot ganhou!")
