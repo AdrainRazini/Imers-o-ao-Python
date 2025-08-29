@@ -39,7 +39,7 @@ bot_nome = resultado["Nome"]
 
 def bot(valor):
  print('-_-' * 15)
- print(f' Bot: {resultado["Nome"]}')
+ print(f' Bot Escolheu: {resultado["Nome"]}')
  print('-_-' * 15)
  print(f'Jogo: {valor} x {resultado["Nome"]}')
  print('-_-' * 15)
